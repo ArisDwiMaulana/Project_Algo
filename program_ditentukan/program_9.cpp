@@ -57,6 +57,45 @@ void luas_persegi(){
   cout<<"Luas persegi = "<<sisi*sisi<<endl;
 }
 
+void luas_persegi_panjang(){
+  int panjang = 0, lebar = 0;
+  cout<<"Menghitung luas persegi panjang"<<endl;
+  cout<<"Masukan panjang : ";
+  cin>>panjang;
+  cout<<"Masukan lebar : ";
+  cin>>lebar;
+  cout<<"Luas persegi panjang = "<<panjang*lebar<<endl;
+}
+
+void luas_segitiga(){
+  double alas, tinggi;
+  cout<<"Menghitung luas segitiga"<<endl;
+  cout<<"Masukan panjang alas : ";
+  cin>>alas;
+  cout<<"Masukan tinggi : ";
+  cin>>tinggi;
+  cout<<"Luas segitiga = "<<alas*tinggi/2<<endl;
+}
+
+
+void luas_lingkaran(double PI){
+  double jari_jari;
+  cout<<"Menghitung luas Lingkaran"<<endl;
+  cout<<"Masukan panjang jari-jari : ";
+  cin>>jari_jari;
+  cout<<"Volume Lingkaran = "<<PI*jari_jari*jari_jari<<endl;
+}
+
+void luas_jajargenjang(){
+  int alas, tinggi;
+  cout<<"Menghitung luas jajar genjang"<<endl;
+  cout<<"Masukan panjang alas : ";
+  cin>>alas;
+  cout<<"Masukan tinggi : ";
+  cin>>tinggi;
+  cout<<"Luas jajar genjang = "<<alas*tinggi<<endl;
+}
+
 void volume_kubus(){
   int sisi;
   cout<<"Menghitung volume kubus"<<endl;
@@ -65,8 +104,49 @@ void volume_kubus(){
   cout<<"Volume kubus = "<<sisi*sisi*sisi<<endl;
 }
 
+void volume_balok(){
+  int panjang, lebar, tinggi;
+  cout<<"Menghitung volume balok"<<endl;
+  cout<<"Masukan panjang : ";
+  cin>>panjang;
+  cout<<"Masukan lebar : ";
+  cin>>lebar;
+  cout<<"Masukan tinggi : ";
+  cin>>tinggi;
+  cout<<"Volume balok = "<<panjang*lebar*tinggi<<endl;
+}
+
+void volume_tabung(double PI){
+  double jari_jari, tinggi;
+  cout<<"Menghitung volume tabung"<<endl;
+  cout<<"Masukan panjang jari-jari : ";
+  cin>>jari_jari;
+  cout<<"Masukan tinggi : ";
+  cin>>tinggi;
+  cout<<"Volume tabung = "<<PI*jari_jari*tinggi<<endl;
+}
+
+void volume_bola(double PI){
+  double jari_jari;
+  cout<<"Menghitung volume bola"<<endl;
+  cout<<"Masukan panjang jari-jari : ";
+  cin>>jari_jari;
+  cout<<"Volume bola = "<<(4/3)*PI*jari_jari*jari_jari*jari_jari<<endl;
+}
+
+void volume_kerucut(double PI){
+  double jari_jari, tinggi;
+  cout<<"Menghitung volume kerucut"<<endl;
+  cout<<"Masukan panjang jari-jari : ";
+  cin>>jari_jari;
+  cout<<"Masukan tinggi : ";
+  cin>>tinggi;
+  cout<<"Volume kerucut = "<<PI*jari_jari*jari_jari*tinggi/3<<endl;
+}
+
 int main(){
   int pilih_bangun = 0, pilih_pengukuran = 0;
+  const double PI = 3.14;
   identitas();
   menu(pilih_pengukuran, pilih_bangun);
   switch(pilih_bangun){
@@ -78,12 +158,33 @@ int main(){
       }
       break;
     case 2:
+      if(pilih_pengukuran == 1){
+        luas_persegi_panjang();
+      }else if(pilih_pengukuran == 2){
+        volume_balok();
+      }
       break;
     case 3:
+      if(pilih_pengukuran == 1){
+        luas_segitiga();
+      }else if(pilih_pengukuran == 2){
+        volume_tabung(PI);
+      }
       break;
     case 4:
+      if(pilih_pengukuran == 1){
+        luas_lingkaran(PI);
+      }else if(pilih_pengukuran == 2){
+        volume_bola(PI);
+      }
       break;
     case 5:
+      if(pilih_pengukuran == 1){
+        luas_jajargenjang();
+      }else if(pilih_pengukuran == 2){
+        volume_kerucut(PI);
+      }
+
       break;
     case 6:
       break;
