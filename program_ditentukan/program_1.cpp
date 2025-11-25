@@ -43,7 +43,6 @@ int main () {
   int banyaknya_nilai_tertinggi = banyaknya_nilai_terbesar(nilai_mhs, nilai_tertinggi);
   cout<<"Nilai tertinggi = "<<nilai_tertinggi<<endl;
   cout<<"Banyaknya mahasiswa memiliki nilai tertinggi = "<<banyaknya_nilai_tertinggi<<endl;
-
   
   return 0;
 }
