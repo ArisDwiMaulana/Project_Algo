@@ -86,6 +86,16 @@ void luas_lingkaran(double PI){
   cout<<"Volume Lingkaran = "<<PI*jari_jari*jari_jari<<endl;
 }
 
+void luas_belahketupat(){
+  double d1, d2;
+  cout<<"Menghitung luas belah ketupat"<<endl;
+  cout<<"Masukan panjang d1 : ";
+  cin>>d1;
+  cout<<"Masukan panjang d2 : ";
+  cin>>d2;
+  cout<<"Luas belah ketupat = "<<d1*d2/2<<endl;
+}
+
 void luas_jajargenjang(){
   int alas, tinggi;
   cout<<"Menghitung luas jajar genjang"<<endl;
@@ -94,6 +104,28 @@ void luas_jajargenjang(){
   cout<<"Masukan tinggi : ";
   cin>>tinggi;
   cout<<"Luas jajar genjang = "<<alas*tinggi<<endl;
+}
+
+void luas_layang_layang(){
+  double d1, d2;
+  cout<<"Menghitung luas layang-layang"<<endl;
+  cout<<"Masukan panjang d1 : ";
+  cin>>d1;
+  cout<<"Masukan panjang d2 : ";
+  cin>>d2;
+  cout<<"Luas layang-layang = "<<d1*d2/2<<endl;
+}
+
+void luas_trapesium(){
+  double a1, a2, tinggi;
+  cout<<"Menghitung luas trapesium"<<endl;
+  cout<<"Masukan panjang a1 : ";
+  cin>>a1;
+  cout<<"Masukan panjang a2 : ";
+  cin>>a2;
+  cout<<"Masukan tinggi : ";
+  cin>>tinggi;
+  cout<<"Luas trapesium = "<<(a1 + a2)*tinggi/2<<endl;
 }
 
 void volume_kubus(){
@@ -144,6 +176,38 @@ void volume_kerucut(double PI){
   cout<<"Volume kerucut = "<<PI*jari_jari*jari_jari*tinggi/3<<endl;
 }
 
+void volume_limas_segitiga(){
+  double luasSegitiga, tinggi;
+  cout<<"Menghitung volume limas segitiga"<<endl;
+  cout<<"Masukan luas segitiga : ";
+  cin>>luasSegitiga;
+  cout<<"Masukan tinggi : ";
+  cin>>tinggi;
+  cout<<"Volume limas segitiga = "<<luasSegitiga*tinggi/3<<endl;
+}
+
+void volume_limas_segiempat(){
+  double panjang, lebar, tinggi;
+  cout<<"Menghitung volume limas segiempat"<<endl;
+  cout<<"Masukan panjang : ";
+  cin>>panjang;
+  cout<<"Masukan lebar : ";
+  cin>>lebar;
+  cout<<"Masukan tinggi : ";
+  cin>>tinggi;
+  cout<<"Volume limas Segiempat = "<<panjang*lebar*tinggi/3<<endl;
+}
+
+void volume_prisma_segitiga(){
+  int luasSegitiga, tinggi;
+  cout<<"Menghitung volume prisma segitiga"<<endl;
+  cout<<"Masukan luas segitiga : ";
+  cin>>luasSegitiga;
+  cout<<"Masukan tinggi : ";
+  cin>>tinggi;
+  cout<<"Volume prisma segitiga = "<<luasSegitiga*tinggi<<endl;
+}
+
 int main(){
   int pilih_bangun = 0, pilih_pengukuran = 0;
   const double PI = 3.14;
@@ -184,13 +248,27 @@ int main(){
       }else if(pilih_pengukuran == 2){
         volume_kerucut(PI);
       }
-
       break;
     case 6:
+      if(pilih_pengukuran == 1){
+        luas_belahketupat();
+      }else if(pilih_pengukuran == 2){
+        volume_limas_segitiga();
+      }
       break;
     case 7:
+      if(pilih_pengukuran == 1){
+        luas_layang_layang();
+      }else if(pilih_pengukuran == 2){
+        volume_limas_segiempat();
+      }
       break;
     case 8:
+      if(pilih_pengukuran == 1){
+        luas_trapesium();
+      }else if(pilih_pengukuran == 2){
+        volume_prisma_segitiga();
+      }
       break;
     default:
       cout<<"Menu yang anda pilih tidak ada"<<endl;
