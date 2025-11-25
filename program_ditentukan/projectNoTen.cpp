@@ -24,11 +24,14 @@ void TetradCom();
 
 int main(){
 int index=0;
-string notasi,sifat;
+string notasi,sifat,nama,NIM;
 char inputCom;
 
-
-    cout<<"\n Program Menentukan Notasi, Sifat Warna, dan Perpaduan Warna Harmonis \n Warna-Warna: "<<endl;
+    cout<<"\n---------------------------------------------------------------------------------------------";
+    cout<<"\n              Nama    : ";getline(cin,nama);
+    cout<<"\n              NIM     : ";cin>>NIM;
+    cout<<"\n---------------------------------------------------------------------------------------------";
+    cout<<"\n\n\n Program Menentukan Notasi, Sifat Warna, dan Perpaduan Warna Harmonis \n Warna-Warna: "<<endl;
 
     for(int i = 0;i<4;i++){
         for(int j=0;j<3;j++){
